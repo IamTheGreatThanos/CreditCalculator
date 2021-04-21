@@ -452,7 +452,7 @@ class _ListPageWidgetState extends State<ListPageWidget> {
                 onPressed: () {
                   auth.signOut().then((value){
                     AppConstants.isLoged = false;
-                    Navigator.push(
+                    Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
                           builder: (context) => LoginWidget()),
