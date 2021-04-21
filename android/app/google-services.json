@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1088298526597",
+    "project_id": "creditcalcproject",
+    "storage_bucket": "creditcalcproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1088298526597:android:a5db87b19dda05c9afc6ec",
+        "android_client_info": {
+          "package_name": "com.flutterflow.mydream"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1088298526597-8kfhj27pq60vn0sngu0mdhm3pup3n6i8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXvcRaOceqP6nEXsdXwe28_awnbgx4_lQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1088298526597-8kfhj27pq60vn0sngu0mdhm3pup3n6i8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1088298526597-o2nj04ln619p48hd4h2cn9g67q9sj97r.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.flutterflow.CreditCalc"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
