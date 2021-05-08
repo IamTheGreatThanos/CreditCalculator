@@ -40,9 +40,9 @@ class _LoginWidgetState extends State<LoginWidget> {
             Align(
               alignment: Alignment(0, 0),
               child: Image.asset(
-                'assets/images/Frame 3.png',
-                width: 100,
-                height: 100,
+                'assets/images/blob-scene-haikei 1.png',
+                width: double.infinity,
+                height: double.infinity,
                 fit: BoxFit.cover,
               ),
             ),
@@ -246,15 +246,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                 ),
               ),
             ),
-            Align(
-              alignment: Alignment(0, -0.65),
-              child: Image.asset(
-                'assets/images/Frame 3.png',
-                width: 100,
-                height: 100,
-                fit: BoxFit.cover,
-              ),
-            )
+      
           ],
         ),
       ),

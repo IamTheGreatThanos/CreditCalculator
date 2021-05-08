@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:my_dream/nav.dart';
 import 'package:provider/provider.dart';
 import 'auth/auth.dart';
 import 'package:my_dream/login/login_widget.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'My Flutter App',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: MyDreamHomePage(),
+      home: LoginWidget(),
     );
   }
 }

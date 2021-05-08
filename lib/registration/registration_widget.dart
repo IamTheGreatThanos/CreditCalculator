@@ -38,7 +38,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
         child: Stack(
           children: [
             Image.asset(
-              'assets/images/Frame 3.png',
+              'assets/images/blob-scene-haikei 1.png',
               width: double.infinity,
               height: double.infinity,
               fit: BoxFit.cover,
@@ -219,6 +219,69 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                   obscureText: false,
                                   decoration: InputDecoration(
                                     labelText: 'Повторите пароль',
+                                    labelStyle:
+                                        FlutterFlowTheme.bodyText2.override(
+                                      fontFamily: 'Montserrat',
+                                      color: Color(0xFF8B97A2),
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                    enabledBorder: UnderlineInputBorder(
+                                      borderSide: BorderSide(
+                                        color: Colors.transparent,
+                                        width: 1,
+                                      ),
+                                      borderRadius: const BorderRadius.only(
+                                        topLeft: Radius.circular(4.0),
+                                        topRight: Radius.circular(4.0),
+                                      ),
+                                    ),
+                                    focusedBorder: UnderlineInputBorder(
+                                      borderSide: BorderSide(
+                                        color: Colors.transparent,
+                                        width: 1,
+                                      ),
+                                      borderRadius: const BorderRadius.only(
+                                        topLeft: Radius.circular(4.0),
+                                        topRight: Radius.circular(4.0),
+                                      ),
+                                    ),
+                                  ),
+                                  style: FlutterFlowTheme.bodyText2.override(
+                                    fontFamily: 'Montserrat',
+                                    color: Color(0xFF8B97A2),
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                     Padding(
+                      padding: EdgeInsets.fromLTRB(0, 12, 0, 0),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Expanded(
+                            child: Container(
+                              width: 330,
+                              height: 60,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(8),
+                                border: Border.all(
+                                  color: Color(0xFFE6E6E6),
+                                ),
+                              ),
+                              alignment: Alignment(0, 0),
+                              child: Padding(
+                                padding: EdgeInsets.fromLTRB(16, 0, 0, 0),
+                                child: TextFormField(
+                                  controller: textController3,
+                                  obscureText: false,
+                                  decoration: InputDecoration(
+                                    labelText: 'Фамилия Имя',
                                     labelStyle:
                                         FlutterFlowTheme.bodyText2.override(
                                       fontFamily: 'Montserrat',

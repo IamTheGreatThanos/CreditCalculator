@@ -4,6 +4,7 @@ import 'package:my_dream/credit_page/credit_page_widget.dart';
 import 'package:my_dream/flutter_flow/flutter_flow_widgets.dart';
 import 'package:my_dream/login/login_widget.dart';
 import 'package:my_dream/profile/profile_widget.dart';
+import 'package:my_dream/nav.dart';
 import 'package:provider/provider.dart';
 import '../const.dart';
 import '../flutter_flow/flutter_flow_theme.dart';

@@ -62,7 +62,7 @@ class _VerificationWidgetState extends State<VerificationWidget> {
         child: Stack(
           children: [
             Image.asset(
-              'assets/images/Frame 3.png',
+              'assets/images/blob-scene-haikei 1.png',
               width: double.infinity,
               height: double.infinity,
               fit: BoxFit.cover,

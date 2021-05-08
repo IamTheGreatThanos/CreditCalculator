@@ -3,6 +3,7 @@ import 'package:my_dream/profile/profile_item.dart';
 import 'dart:convert';
 import '../flutter_flow/flutter_flow_theme.dart';
 import 'package:flutter/material.dart';
+import 'package:my_dream/nav.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ProfileWidget extends StatefulWidget {

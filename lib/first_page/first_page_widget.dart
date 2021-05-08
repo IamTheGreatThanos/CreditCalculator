@@ -2,6 +2,7 @@ import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:my_dream/nav.dart';
 
 class FirstPageWidget extends StatefulWidget {
   FirstPageWidget({Key key}) : super(key: key);
@@ -24,7 +25,7 @@ class _FirstPageWidgetState extends State<FirstPageWidget> {
             Align(
               alignment: Alignment(0, 0),
               child: Image.asset(
-                'assets/images/Frame 3.png',
+                'assets/images/blob-scene-haikei 1.png',
                 width: double.infinity,
                 height: double.infinity,
                 fit: BoxFit.cover,
@@ -108,7 +109,7 @@ class _FirstPageWidgetState extends State<FirstPageWidget> {
             Align(
               alignment: Alignment(0, -0.65),
               child: Image.asset(
-                'assets/images/Frame 3.png',
+                'assets/images/Revenue-cuate 1.png',
                 width: 300,
                 height: 300,
                 fit: BoxFit.cover,
