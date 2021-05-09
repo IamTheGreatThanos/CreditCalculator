@@ -51,22 +51,22 @@ class _CreditPageWidgetState extends State<CreditPageWidget> {
             fontWeight: FontWeight.w500,
           ),
         ),
-        actions: [
-          Padding(
-            padding: EdgeInsets.fromLTRB(0, 8, 0, 8),
-            child: Container(
-              width: 120,
-              height: 120,
-              clipBehavior: Clip.antiAlias,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-              ),
-              child: Image.asset(
-                'assets/images/ava.png',
-              ),
-            ),
-          )
-        ],
+        // actions: [
+        //   Padding(
+        //     padding: EdgeInsets.fromLTRB(0, 8, 0, 8),
+        //     child: Container(
+        //       width: 120,
+        //       height: 120,
+        //       clipBehavior: Clip.antiAlias,
+        //       decoration: BoxDecoration(
+        //         shape: BoxShape.circle,
+        //       ),
+        //       child: Image.asset(
+        //         'assets/images/ava.png',
+        //       ),
+        //     ),
+        //   )
+        // ],
         centerTitle: true,
         elevation: 4,
       ),

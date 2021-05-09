@@ -26,42 +26,42 @@ class _ListPageWidgetState extends State<ListPageWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      appBar: AppBar(
-        backgroundColor: Color(0xFF407BFF),
-        automaticallyImplyLeading: false,
-        actions: [
-          Row(
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              Padding(
-                padding: EdgeInsets.fromLTRB(0, 8, 0, 8),
-                child: GestureDetector(
-                  onTap: (){
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => ProfileWidget()),
-                      );
-                    },
-                    child: Container(
-                    width: 120,
-                    height: 120,
-                    clipBehavior: Clip.antiAlias,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                    ),
-                    child: Image.asset(
-                      'assets/images/ava.png',
-                    ),
-                  ),
-                ),
-              )
-            ],
-          )
-        ],
-        centerTitle: false,
-        elevation: 4,
-      ),
+      // appBar: AppBar(
+      //   backgroundColor: Color(0xFF407BFF),
+      //   automaticallyImplyLeading: false,
+      //   actions: [
+      //     Row(
+      //       mainAxisSize: MainAxisSize.max,
+      //       children: [
+      //         Padding(
+      //           padding: EdgeInsets.fromLTRB(0, 8, 0, 8),
+      //           child: GestureDetector(
+      //             onTap: (){
+      //                 Navigator.push(
+      //                   context,
+      //                   MaterialPageRoute(
+      //                       builder: (context) => ProfileWidget()),
+      //                 );
+      //               },
+      //               child: Container(
+      //               width: 120,
+      //               height: 120,
+      //               clipBehavior: Clip.antiAlias,
+      //               decoration: BoxDecoration(
+      //                 shape: BoxShape.circle,
+      //               ),
+      //               child: Image.asset(
+      //                 'assets/images/ava.png',
+      //               ),
+      //             ),
+      //           ),
+      //         )
+      //       ],
+      //     )
+      //   ],
+      //   centerTitle: false,
+      //   elevation: 4,
+      // ),
       body: SafeArea(
         child: Column(
           mainAxisSize: MainAxisSize.min,

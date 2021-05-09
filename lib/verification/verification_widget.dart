@@ -7,6 +7,7 @@ import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../main.dart';
+import '../nav.dart';
 
 class VerificationWidget extends StatefulWidget {
   VerificationWidget({Key key}) : super(key: key);
@@ -48,7 +49,7 @@ class _VerificationWidgetState extends State<VerificationWidget> {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-            builder: (context) => ListPageWidget()),
+            builder: (context) => Nav()),
       );
     }
   }

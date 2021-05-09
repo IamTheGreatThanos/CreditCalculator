@@ -14,7 +14,7 @@ class _NavState extends State<Nav> {
   int _selectedIndex = 0;
   List<Widget> _widgetOptions=<Widget>[
     ListPageWidget (),
-    CreditPageWidget(),
+    CreditPageWidget(title: 'Kaspi.kz', id: 0),
     ProfileWidget(),
   ];
 

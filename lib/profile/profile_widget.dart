@@ -21,16 +21,17 @@ class _ProfileWidgetState extends State<ProfileWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      appBar: AppBar(
-        backgroundColor: Color(0xFF407BFF),
-        automaticallyImplyLeading: true,
-        centerTitle: true,
-        elevation: 4,
-      ),
+      // appBar: AppBar(
+      //   backgroundColor: Color(0xFF407BFF),
+      //   automaticallyImplyLeading: true,
+      //   centerTitle: true,
+      //   elevation: 4,
+      // ),
       body: Container(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              SizedBox(height: 80,),
               Container(
                 width: 120,
                 height: 120,
@@ -45,7 +46,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
               Padding(
                 padding: EdgeInsets.fromLTRB(0, 8, 0, 0),
                 child: Text(
-                  'Атымтаева М',
+                  AppConstants.fullName,
                   style: FlutterFlowTheme.bodyText1.override(
                     fontFamily: 'Montserrat',
                     fontSize: 16,

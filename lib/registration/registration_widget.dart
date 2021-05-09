@@ -3,6 +3,7 @@ import 'package:my_dream/auth/auth.dart';
 import 'package:my_dream/verification/verification_widget.dart';
 import 'package:provider/provider.dart';
 import '../appBar.dart';
+import '../const.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
@@ -18,6 +19,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
   TextEditingController textController1;
   TextEditingController textController2;
   TextEditingController textController3;
+  TextEditingController textController4;
   final scaffoldKey = GlobalKey<ScaffoldState>();
   final auth = FirebaseAuth.instance;
 
@@ -27,6 +29,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
     textController1 = TextEditingController();
     textController2 = TextEditingController();
     textController3 = TextEditingController();
+    textController4 = TextEditingController();
   }
 
   @override
@@ -278,7 +281,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                               child: Padding(
                                 padding: EdgeInsets.fromLTRB(16, 0, 0, 0),
                                 child: TextFormField(
-                                  controller: textController3,
+                                  controller: textController4,
                                   obscureText: false,
                                   decoration: InputDecoration(
                                     labelText: 'Фамилия Имя',
@@ -330,6 +333,9 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                             if (textController2.text == textController3.text){
                               try{
                                 auth.createUserWithEmailAndPassword(email: textController1.text.trim(), password: textController2.text.trim()).then((value){
+                                  if (textController4.text != ''){
+                                    AppConstants.fullName = textController4.text;
+                                  }
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(

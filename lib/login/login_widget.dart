@@ -9,6 +9,8 @@ import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../nav.dart';
+
 class LoginWidget extends StatefulWidget {
   LoginWidget({Key key}) : super(key: key);
 
@@ -183,7 +185,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => ListPageWidget()),
+                                    builder: (context) => Nav()),
                               );
                             });
                             // context.read<AuthService>().signIn(

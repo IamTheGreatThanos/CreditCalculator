@@ -59,7 +59,7 @@ class AuthenticationWrapper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (AppConstants.isLoged == true) {
-      return ListPageWidget();
+      return Nav();
     }
     return LoginWidget();
   }
