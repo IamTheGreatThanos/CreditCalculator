@@ -32,7 +32,7 @@ class _LoginWidgetState extends State<LoginWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: buildAppBar('Login'),
+      appBar: buildAppBar('Nav'),
       key: scaffoldKey,
       body: SafeArea(
         child: Stack(
