@@ -1,8 +1,8 @@
-class CreditItem{
+class FbgItem{
   String name;
-  int amount;
-  int perMonth;
-
-  CreditItem(this.name, this.amount, this.perMonth);
   
+  DateTime bithday;
+  String gender;
+
+  FbgItem(this.name, this.bithday, this.gender);
 }

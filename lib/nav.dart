@@ -36,15 +36,15 @@ void _onItemTab(int index){
         items: const <BottomNavigationBarItem>[
         BottomNavigationBarItem(
           icon:Icon(Icons.home),
-           label: 'Основной',
-         ),
-          BottomNavigationBarItem(
-          icon:Icon(Icons.money),
            label: 'Кредитование',
          ),
           BottomNavigationBarItem(
+          icon:Icon(Icons.money),
+           label: 'Мои кредиты',
+         ),
+          BottomNavigationBarItem(
           icon:Icon(Icons.person),
-           label: 'Профиль',
+           label: 'Мой профиль',
          )
 
       ],
