@@ -41,6 +41,7 @@ dependencies:
   rxdart: ^0.25.0
   sign_in_with_apple: ^2.5.4
   url_launcher:
+  date_time_picker: "1.1.1"
 
 
   # The following adds the Cupertino Icons font to your application.

@@ -1,7 +1,7 @@
 import 'package:my_dream/const.dart';
 import 'package:my_dream/credit_page/type_of_credit.dart';
+import 'package:my_dream/profile/credit_story_item.dart';
 import 'package:my_dream/profile/profile_item.dart';
-
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';

@@ -15,7 +15,7 @@ class ProfileWidget extends StatefulWidget {
 
 class _ProfileWidgetState extends State<ProfileWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
- // List<FbgItem> list = AppConstants.fbg;
+//  List<FbgItem> list = AppConstants.fbg;
 
   @override
   Widget build(BuildContext context) {
@@ -43,26 +43,28 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                   fit: BoxFit.cover,
                 ),
               ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(0, 8, 0, 0),
-                child: Text(
-                  AppConstants.fullName,
-                  style: FlutterFlowTheme.bodyText1.override(
-                    fontFamily: 'Montserrat',
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-              ),
+              // Padding(
+              //   padding: EdgeInsets.fromLTRB(0, 8, 0, 0),
+              //   child: Text(
+              //     AppConstants.fullName,
+              //     style: FlutterFlowTheme.bodyText1.override(
+              //       fontFamily: 'Montserrat',
+              //       fontSize: 16,
+              //       fontWeight: FontWeight.w500,
+              //     ),
+              //   ),
+              // ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Container(
                   width: MediaQuery.of(context).size.width,
                   height: MediaQuery.of(context).size.height*0.6,
-                  child: ListView.builder(
-                 // itemCount: list.length,
-                  itemBuilder: (BuildContext context, int index) {
-                    return Padding(
+                  child: 
+                //   ListView.builder(
+                //  // itemCount: list.length,
+                //   itemBuilder: (BuildContext context, int index) {
+                //     return
+                  Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: Container(
                         margin:
@@ -91,7 +93,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(0, 4, 0, 0),
                                   child: Text(
-                                 //   list[index].name,
+                                   AppConstants.fullName,
                                     style: FlutterFlowTheme.bodyText1.override(
                                       fontFamily: 'Montserrat',
                                       fontSize: 22,
@@ -118,7 +120,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(0, 4, 0, 0),
                                   child: Text(
-                                 //   '${list[index].bithday}',
+                                   AppConstants.birthday,
                                     style: FlutterFlowTheme.bodyText1.override(
                                       fontFamily: 'Montserrat',
                                       fontSize: 22,
@@ -145,7 +147,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(0, 4, 0, 0),
                                   child: Text(
-                                //    '${list[index].gender}',
+                                   AppConstants.gender?'Mужской':'Женский',
                                     textAlign: TextAlign.start,
                                     style: FlutterFlowTheme.bodyText1.override(
                                       fontFamily: 'Montserrat',
@@ -158,9 +160,10 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                             ]
                         ),
                       ),
-                    );
-                  },
-                ),
+                    )
+                    // ;
+                // }
+                // )
                 ),
               )
             ],

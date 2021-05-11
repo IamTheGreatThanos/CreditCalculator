@@ -1,3 +1,4 @@
+import 'package:date_time_picker/date_time_picker.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:my_dream/auth/auth.dart';
 import 'package:my_dream/verification/verification_widget.dart';
@@ -22,6 +23,8 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
   TextEditingController textController4;
   final scaffoldKey = GlobalKey<ScaffoldState>();
   final auth = FirebaseAuth.instance;
+  Object _value = 0;
+  String dateOfBirthd;
 
   @override
   void initState() {
@@ -324,6 +327,37 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                         ],
                       ),
                     ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: DropdownButtonHideUnderline(
+                        child: DropdownButton(
+                          dropdownColor: Colors.white,
+                          hint: new Text("Пол"),
+                          value: _value,
+                          items: [DropdownMenuItem(child: Text('Мужской'), value: 0),DropdownMenuItem(child: Text('Женский'), value: 1)],
+                          onChanged: (value) {
+                            setState(() {
+                              _value = value;
+                            });
+                          }
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: DateTimePicker(
+                        initialValue: '2000-01-01',
+                        firstDate: DateTime(1955),
+                        lastDate: DateTime(2030),
+                        dateLabelText: 'Дата рождения',
+                        onChanged: (val) => dateOfBirthd = val,
+                        validator: (val) {
+                          print(val);
+                          return null;
+                        },
+                        onSaved: (val) => dateOfBirthd = val,
+                      ),
+                    ),
                     Align(
                       alignment: Alignment(0.95, 0),
                       child: Padding(
@@ -336,6 +370,8 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                   if (textController4.text != ''){
                                     AppConstants.fullName = textController4.text;
                                   }
+                                  _value == 0 ? AppConstants.gender = true : AppConstants.gender = false;
+                                  AppConstants.birthday = dateOfBirthd;
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
