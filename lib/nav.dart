@@ -22,7 +22,6 @@ class _NavState extends State<Nav> {
 void _onItemTab(int index){
   setState(() {
     _selectedIndex = index;
-
   });
 }
 

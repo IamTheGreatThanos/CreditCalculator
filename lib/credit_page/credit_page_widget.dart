@@ -1,7 +1,10 @@
 import 'package:my_dream/const.dart';
 import 'package:my_dream/credit_page/type_of_credit.dart';
+import 'package:my_dream/profile/credit_story.dart';
 import 'package:my_dream/profile/credit_story_item.dart';
+import 'package:my_dream/profile/credit_story_widget.dart';
 import 'package:my_dream/profile/profile_item.dart';
+import '../alert.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
@@ -350,9 +353,56 @@ class _CreditPageWidgetState extends State<CreditPageWidget> {
                               sum = int.parse(textController1.text);
                               var oneMonth = (double.parse(textController1.text) * listOfCoef[widget.id])~/12;
                               perMonth = (sum + (oneMonth * int.parse(textController2.text)))~/int.parse(textController2.text);
+                            }
+                          });
+                        }
+                      }
+                      else{
+                        scaffoldKey.currentState.showSnackBar(SnackBar(
+                                  content: Text('Заполните поля!')
+                          )
+                        );
+                      }
+                    },
+                    text: 'Рассчитать кредит',
+                    options: FFButtonOptions(
+                      width: double.infinity,
+                      height: 60,
+                      color: Color(0xFF407BFF),
+                      textStyle: FlutterFlowTheme.subtitle2.override(
+                        fontFamily: 'Montserrat',
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w500,
+                      ),
+                      elevation: 2,
+                      borderSide: BorderSide(
+                        color: Colors.transparent,
+                        width: 2,
+                      ),
+                      borderRadius: 16,
+                    ),
+                  ),
+                ),
+              ),
+              Align(
+                alignment: Alignment(0.05, 0),
+                child: Padding(
+                  padding: EdgeInsets.fromLTRB(0, 16, 0, 0),
+                  child: FFButtonWidget(
+                    onPressed: () {
+                      if (textController1.text != '' && textController2.text != ''){
+                        if (mounted){
+                          setState((){
+                            if(int.parse(textController1.text) != null){
+                              sum = int.parse(textController1.text);
+                              var oneMonth = (double.parse(textController1.text) * listOfCoef[widget.id])~/12;
+                              perMonth = (sum + (oneMonth * int.parse(textController2.text)))~/int.parse(textController2.text);
 
                               var credItem = CreditItem(widget.title, sum, perMonth);
                               AppConstants.data.add(credItem);
+
+                              showCustomAlert(context);
                             }
                           });
                         }
@@ -391,4 +441,24 @@ class _CreditPageWidgetState extends State<CreditPageWidget> {
       ),
     );
   }
+
+  showCustomAlert(context) {
+    var dialog = CustomAlertDialog(
+        title: "Внимание",
+        message: "Кредит оформлен!",
+        onPostivePressed: () {
+          Navigator.pop(context);
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => CreditStory()),
+          );
+        },
+        positiveBtnText: 'Ok',
+        // negativeBtnText: 'Нет'
+        );
+    showDialog(context: context, builder: (BuildContext context) => dialog);
+  }
+
+
 }

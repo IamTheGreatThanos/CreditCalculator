@@ -24,6 +24,7 @@ class MyApp extends StatelessWidget {
       title: 'My Flutter App',
       theme: ThemeData(primarySwatch: Colors.blue),
       home: LoginWidget(),
+      // home: Nav(),
     );
   }
 }

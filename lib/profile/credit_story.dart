@@ -7,13 +7,13 @@ import 'package:flutter/material.dart';
 import 'package:my_dream/nav.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class CreditStoryWidget extends StatefulWidget {
-  CreditStoryWidget({Key key}) : super(key: key);
+class CreditStory extends StatefulWidget {
+  CreditStory({Key key}) : super(key: key);
   @override
-  _CreditStoryWidget createState() => _CreditStoryWidget();
+  _CreditStory createState() => _CreditStory();
 }
 
-class _CreditStoryWidget extends State<CreditStoryWidget> {
+class _CreditStory extends State<CreditStory> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
   List<CreditItem> list = AppConstants.data;
 
@@ -21,12 +21,12 @@ class _CreditStoryWidget extends State<CreditStoryWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      // appBar: AppBar(
-      //   backgroundColor: Color(0xFF407BFF),
-      //   automaticallyImplyLeading: true,
-      //   centerTitle: true,
-      //   elevation: 4,
-      // ),
+      appBar: AppBar(
+        backgroundColor: Color(0xFF407BFF),
+        automaticallyImplyLeading: true,
+        centerTitle: true,
+        elevation: 4,
+      ),
       body: Container(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

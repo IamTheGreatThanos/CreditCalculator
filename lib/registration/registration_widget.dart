@@ -363,10 +363,12 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                       child: Padding(
                         padding: EdgeInsets.fromLTRB(0, 16, 0, 0),
                         child: FFButtonWidget(
-                          onPressed: () {
+                          onPressed: () async {
                             if (textController2.text == textController3.text){
                               try{
-                                auth.createUserWithEmailAndPassword(email: textController1.text.trim(), password: textController2.text.trim()).then((value){
+                                UserCredential user = await auth.createUserWithEmailAndPassword(email: textController1.text.trim(), password: textController2.text.trim());
+                                
+                                if (user != null){
                                   if (textController4.text != ''){
                                     AppConstants.fullName = textController4.text;
                                   }
@@ -377,7 +379,7 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                     MaterialPageRoute(
                                         builder: (context) => VerificationWidget()),
                                   );
-                                });
+                                }
                                 // context.read<AuthService>().signUp(
                                 //   email: textController1.text.trim(),
                                 //   password: textController2.text.trim(),

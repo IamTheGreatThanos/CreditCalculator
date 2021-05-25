@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/services.dart';
 import 'package:my_dream/appBar.dart';
 import 'package:my_dream/auth/auth.dart';
 import 'package:my_dream/const.dart';
@@ -178,22 +179,24 @@ class _LoginWidgetState extends State<LoginWidget> {
                         ),
                       ),
                       FFButtonWidget(
-                        onPressed: () {
+                        onPressed: () async {
                           try{
-                            auth.signInWithEmailAndPassword(email: textController1.text.trim(), password: textController2.text.trim()).then((value){
+                            var user = await auth.signInWithEmailAndPassword(email: textController1.text.trim(), password: textController2.text.trim());
+                            if (user != null){
                               AppConstants.isLoged = true;
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) => Nav()),
                               );
-                            });
+                            }
                             // context.read<AuthService>().signIn(
                             //   email: textController1.text.trim(),
                             //   password: textController2.text.trim(),
                             // );
                           }
                           catch (e){
+                            print('Error');
                             scaffoldKey.currentState.showSnackBar(SnackBar(
                                   content: Text(
                                 'Неверный логин или пароль!',

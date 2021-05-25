@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:my_dream/appBar.dart';
 import 'package:my_dream/auth/auth.dart';
 import 'package:my_dream/credit_page/credit_page_widget.dart';
 import 'package:my_dream/flutter_flow/flutter_flow_widgets.dart';
