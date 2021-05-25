@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_dream/credit_page/credit_page_widget.dart';
 import 'package:my_dream/nav.dart';
+import 'package:my_dream/profile/credit_story_widget.dart';
 import 'package:my_dream/profile/profile_item.dart';
 import 'package:my_dream/profile/profile_widget.dart';
 import 'package:my_dream/list_page/list_page_widget.dart';
@@ -14,7 +15,7 @@ class _NavState extends State<Nav> {
   int _selectedIndex = 0;
   List<Widget> _widgetOptions=<Widget>[
     ListPageWidget (),
-    CreditPageWidget(title: 'Kaspi.kz', id: 0),
+    CreditStoryWidget(),
     ProfileWidget(),
   ];
 

@@ -1,5 +1,6 @@
 import 'package:my_dream/const.dart';
 import 'package:my_dream/profile/credit_story_item.dart';
+import 'package:commons/commons.dart';
 import 'dart:convert';
 import '../flutter_flow/flutter_flow_theme.dart';
 import 'package:flutter/material.dart';
@@ -35,7 +36,7 @@ class _CreditStoryWidget extends State<CreditStoryWidget> {
                 padding: const EdgeInsets.all(8.0),
                 child: Container(
                   width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height*0.6,
+                  height: MediaQuery.of(context).size.height,
                   child: ListView.builder(
                   itemCount: list.length,
                   itemBuilder: (BuildContext context, int index) {
@@ -82,7 +83,7 @@ class _CreditStoryWidget extends State<CreditStoryWidget> {
                                 child: Padding(
                                   padding: EdgeInsets.fromLTRB(0, 8, 0, 0),
                                   child: Text(
-                                    'Оставшийся сумма ',
+                                    'Оставшаяся сумма ',
                                     style: FlutterFlowTheme.bodyText1.override(
                                       fontFamily: 'Montserrat',
                                       fontWeight: FontWeight.w500,
@@ -131,7 +132,15 @@ class _CreditStoryWidget extends State<CreditStoryWidget> {
                                     ),
                                   ),
                                 ),
-                              )
+                              ),
+                              successDialog(  
+                                 context,  
+                                 "Success message",  
+                                  negativeText: "Try Again",  
+                                  negativeAction: () {},  
+                                  positiveText: "Details",  
+                                  positiveAction: () {},  
+                                ),
                             ]
                         ),
                       ),
