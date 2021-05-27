@@ -4,7 +4,6 @@ import 'package:my_dream/profile/credit_story.dart';
 import 'package:my_dream/profile/credit_story_item.dart';
 import 'package:my_dream/profile/credit_story_widget.dart';
 import 'package:my_dream/profile/profile_item.dart';
-import '../alert.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
@@ -402,7 +401,7 @@ class _CreditPageWidgetState extends State<CreditPageWidget> {
                               var credItem = CreditItem(widget.title, sum, perMonth);
                               AppConstants.data.add(credItem);
 
-                              showCustomAlert(context);
+                              showAlertDialog(context);
                             }
                           });
                         }
@@ -442,23 +441,31 @@ class _CreditPageWidgetState extends State<CreditPageWidget> {
     );
   }
 
-  showCustomAlert(context) {
-    var dialog = CustomAlertDialog(
-        title: "Внимание",
-        message: "Кредит оформлен!",
-        onPostivePressed: () {
-          Navigator.pop(context);
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (context) => CreditStory()),
-          );
-        },
-        positiveBtnText: 'Ok',
-        // negativeBtnText: 'Нет'
+  showAlertDialog(BuildContext context) {
+    Widget okButton = FlatButton(
+      child: Text("OK"),
+      onPressed: () {
+        Navigator.pop(context);
+        Navigator.push(context,
+          MaterialPageRoute(
+            builder: (context) => CreditStory()),
         );
-    showDialog(context: context, builder: (BuildContext context) => dialog);
+      },
+    );
+
+    AlertDialog alert = AlertDialog(
+      title: Text("Внимание"),
+      content: Text("Кредит оформлен!"),
+      actions: [
+        okButton,
+      ],
+    );
+
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return alert;
+      },
+    );
   }
-
-
 }
