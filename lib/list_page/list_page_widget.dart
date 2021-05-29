@@ -453,8 +453,11 @@ class _ListPageWidgetState extends State<ListPageWidget> {
               child: FFButtonWidget(
                 onPressed: () {
                   auth.signOut().then((value){
+                    print(AppConstants.email);
                     AppConstants.isLoged = false;
-                    AppConstants.bd[AppConstants.email]['data'] = AppConstants.data;
+                    if (AppConstants.bd.containsKey(AppConstants.email)){
+                      AppConstants.bd[AppConstants.email]['data'] = AppConstants.data;
+                    }
                     AppConstants.data = [];
                     Navigator.pushReplacement(
                       context,

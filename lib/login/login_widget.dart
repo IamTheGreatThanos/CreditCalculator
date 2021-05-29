@@ -191,6 +191,12 @@ class _LoginWidgetState extends State<LoginWidget> {
                                 AppConstants.gender = AppConstants.bd[textController1.text.trim()]['gender'];
                                 AppConstants.data = AppConstants.bd[textController1.text.trim()]['data'];
                               }
+                              else{
+                                AppConstants.fullName = 'Пользователь';
+                                AppConstants.birthday = '';
+                                AppConstants.gender = true;
+                                AppConstants.data = [];
+                              }
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
