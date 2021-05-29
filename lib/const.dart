@@ -7,6 +7,9 @@ class AppConstants {
   ];
   static bool isLoged = false;
   static String fullName = 'Пользователь';
+  static String email = '';
   static String birthday = '';
   static bool gender = true;
+
+  static Map<String,dynamic> bd = {};
 }

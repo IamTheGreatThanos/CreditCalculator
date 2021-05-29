@@ -183,7 +183,14 @@ class _LoginWidgetState extends State<LoginWidget> {
                           try{
                             var user = await auth.signInWithEmailAndPassword(email: textController1.text.trim(), password: textController2.text.trim());
                             if (user != null){
+                              AppConstants.email = textController1.text.trim();
                               AppConstants.isLoged = true;
+                              if (AppConstants.bd.containsKey(textController1.text.trim())){
+                                AppConstants.fullName = AppConstants.bd[textController1.text.trim()]['fullName'];
+                                AppConstants.birthday = AppConstants.bd[textController1.text.trim()]['birthday'];
+                                AppConstants.gender = AppConstants.bd[textController1.text.trim()]['gender'];
+                                AppConstants.data = AppConstants.bd[textController1.text.trim()]['data'];
+                              }
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(

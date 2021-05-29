@@ -454,6 +454,8 @@ class _ListPageWidgetState extends State<ListPageWidget> {
                 onPressed: () {
                   auth.signOut().then((value){
                     AppConstants.isLoged = false;
+                    AppConstants.bd[AppConstants.email]['data'] = AppConstants.data;
+                    AppConstants.data = [];
                     Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(

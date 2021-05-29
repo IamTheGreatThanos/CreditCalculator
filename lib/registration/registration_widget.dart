@@ -379,6 +379,15 @@ class _RegistrationWidgetState extends State<RegistrationWidget> {
                                     MaterialPageRoute(
                                         builder: (context) => VerificationWidget()),
                                   );
+
+                                  Map<String,dynamic> thisMap = {};
+                                  thisMap['fullName'] = AppConstants.fullName;
+                                  thisMap['birthday'] = AppConstants.birthday;
+                                  thisMap['gender'] = AppConstants.gender;
+                                  thisMap['data'] = AppConstants.data;
+
+                                  AppConstants.bd[textController1.text.trim()] = thisMap;
+                                  AppConstants.email = textController1.text.trim();
                                 }
                                 // context.read<AuthService>().signUp(
                                 //   email: textController1.text.trim(),
